@@ -1,4 +1,4 @@
-import useRenderCount from "../../../hook/useRenderCount";
+import useRenderCount from "../../../debugTools/useRenderCount";
 import ClickerCount from "./ClickerCount";
 import SearchText from "./SearchText";
 

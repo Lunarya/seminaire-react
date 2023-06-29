@@ -2,12 +2,16 @@ import { Button, TextField } from "@mui/material";
 import { useCallback, useEffect, useState } from "react";
 
 const Refactoring = () => {
-    const [click, setClick] = useState<number>(0);
     const [text, setText] = useState<string>();
     const [render, setRender] = useState<number>(0);
-    const addOne = useCallback(() => {
-        setClick(click + 1)
-    }, [])
+
+    const [click, setClick] = useState<number>(0);
+    const addOne = useCallback(
+        () => {
+            setClick((oldClick) => oldClick + 1)
+        }, [])
+
+
     useEffect(() => {
         // setRender(render + 1);
     })

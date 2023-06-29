@@ -1,4 +1,5 @@
-import { Button } from "@mui/material";
+import { Button, TextField } from "@mui/material";
+import { useState } from "react";
 
 type ParentProps = {
     data: any[]
@@ -7,18 +8,27 @@ type ParentProps = {
 
 const DataDisplay = (props: ParentProps) => {
     const { data, removeItem } = props;
+    const [switchItem, setswitchItem] = useState<boolean>(true);
     return (
         <div>
-            {data.map((item, id) => (
-                <div key={item}>
-                    {item}
-                    <Button
-                        variant="text"
-                        onClick={() => removeItem(id)}
-                        startIcon="X"
-                    />
-                </div>))}
-        </div>
+
+            {switchItem ?
+                <>
+                    <p>first</p>
+                </>
+                :
+                <>
+                    <p>sec</p>
+                </>
+            }
+            <TextField key={switchItem ? `first` : `sec`} />
+            <Button
+                variant="text"
+                onClick={() => setswitchItem(!switchItem)}
+                startIcon="O"
+            />
+
+        </div >
     )
 }
 

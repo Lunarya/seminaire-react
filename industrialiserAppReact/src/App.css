@@ -1,6 +1,9 @@
 @layer main;
 @layer other;
 
+.App {
+    background-color: lightgreen;
+}
 
 .center-hor {
     display: flex;
@@ -12,11 +15,23 @@
 .center-hor>div {
     display: flex;
     flex-direction: column;
-    background-color: unset;
+    background-color: unset !important;
+
+}
+
+.App>.center-hor>div {
+    background-color: lightgray;
+}
+
+.center-hor>#divMain {
+    background-color: lightseagreen;
+}
+
+#divMain {
+    background-color: lightcoral;
 }
 
 @layer main {
-
     .App {
         margin: 20rem;
         height: 9%;

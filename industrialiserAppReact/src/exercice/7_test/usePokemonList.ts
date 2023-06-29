@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { getAll, Pokemon } from "../../../API";
+import { getAll, Pokemon } from "../../API";
 
 const useGetPokemon = () => {
     const [pokemon, setPokemon] = useState<Pokemon[]>([]);

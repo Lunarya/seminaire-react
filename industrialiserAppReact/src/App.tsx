@@ -1,12 +1,16 @@
+import { Outlet } from 'react-router-dom'
 import './App.css'
-import Debuggage from './exercice/2_debuggage/Debuggage'
+import LazyCompo from './exercice/5_lazy/LazyCompo'
 
 function App() {
-
   return (
-    <div className="App">
+    <div id="myMain" className="App">
       <div className="center-hor">
-        <Debuggage />
+        <div id="divMain">
+
+          <LazyCompo />
+        </div>
+
       </div>
     </div>
   )

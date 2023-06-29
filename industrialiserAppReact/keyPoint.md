@@ -12,12 +12,10 @@ Points Clés
 
 => Index et Barrel
 
-=> Lasy ( factionnement du code )
+=> Lazy ( factionnement du code )
 
 => Ajout de Test
 
 => Architecture de projet (Atomes / Molecules / Organismes)
-
-=> ne pas utiliser de Ref pour contourner les dépendances.
 
 => css layer / priorisation des tags => retirer les importants

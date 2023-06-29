@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 import { useCallback, useState } from "react";
-import useRenderCount from "../../../hook/useRenderCount";
+import { useEffectDebugger,useRenderCount } from "../../../debugTools";
 
 const ClickerCount = () => {
 
@@ -10,13 +10,14 @@ const ClickerCount = () => {
         setClick(old => old + 1)
     }, []);
 
-    const countRender = useRenderCount([ClickCounter]);
+    useEffectDebugger([ClickCounter, addOne], ["ClickCounter", "addOne"], "QCA")
+    const countRender = useRenderCount([ClickCounter, addOne]);
     return (
         <>
             <p>Count render : {countRender}</p>
             <p>Count click : {ClickCounter}</p>
             <Button
-                variant="contained"
+                variant='contained'
                 onClick={addOne}>
                 MyButton
             </Button>
